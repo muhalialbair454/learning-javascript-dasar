@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Arrow</title>
+</head>
+<body>
+    
+    <script>
+    
+    // Arrow Function
+
+    //without param
+    // const sayHello = () =>{
+
+    // }
+
+    // // with 1 param
+    // const sayHello = (param1) =>{
+
+    // }
+
+    // //with multi param
+    // const sayHello = (param2, ...) =>{
+
+    // }
+
+    // //with rest param
+    // const sayHello = (param2, ...data) =>{
+
+    // }
+
+    const sayHello = (name) =>{
+        const say = `Hello ${name}`;
+        console.info(say);
+    }
+    sayHello("Ali");
+
+    // Arrow function tanpa blok / lebih sederhana / untuk sederhana
+    // const sayHi =  (name) => console.info(`Hi ${name}`);
+    //sederhananya, hanya bisa 1 parameter. 
+    //tanpa kurung buka tutup parameter
+    const sayHi =  name => console.info(`Hi ${name}`);
+
+    sayHi("Ali");
+
+     // Arrow function mengembalikan value
+    // tanpa blok tidak memerlukan return
+    const sum = (first, second) => first + second;
+    
+    console.info(sum(10,20));
+
+    
+    // arrow function sebagai parameter
+    function giveMeName(callback){
+        callback("Ali");
+    }
+
+    // Anonymous function
+    // giveMeName(function(name){
+    //     console.info(`Hello ${name}`);
+    // });
+    
+    //di sederhanakan
+    // menggunakan arrow function sebagai parameter
+    giveMeName(name => console.info(`Hella ${name}`));
+</script>
+
+</body>
+</html>

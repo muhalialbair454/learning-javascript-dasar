@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desctructuring</title>
+</head>
+<body>
+    
+    <script>
+
+        // destructuiring, memudahkan kita untuk mengambil data di dalam array,object,...
+        
+        {
+            const names = ["Muhammad", "ali", "Albair", "budi", "joko"];
+        //tanpa destructuring
+        // const firstName = names[0];
+        // const middleName = names[1];
+        // const lastName = names[2];
+
+        // menggunakan destructuring di array
+        let [firstName, middleName, lastName, ...others] = names;
+
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+        console.info(others);
+        }
+
+        // menggunakan destructuring di object
+
+        {
+            const person ={
+            firstName:"Muhammad",
+            middleName:"Ali",
+            lastName:"Albair",
+            address:{
+                street:"Jalan Belum Ada",
+                city:"Jakarta",
+                country: "Indonesia"
+            },
+            hobby: "Game",
+            channel: "Muhammad Ali Albair"
+        };
+
+        // const firstName = person.firstName // kelamaan
+        const {firstName, middleName, lastName, address:{city, street, country}, ...others} = person;
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+        // console.info(address);// undefined karna di nested
+        console.info(city);
+        console.info(street);
+        console.info(country);
+        console.info(others);
+        }
+
+        // menggunakan destructuring di parameter object
+
+        {
+            function displayPerson({firstName, middleName, lastName}){
+                console.info(firstName);
+                console.info(middleName);
+                console.info(lastName);
+            }
+
+            const person = {
+                firstName:"Muhammad",
+                middleName:"Ali",
+                lastName:"Albair",
+            }
+            displayPerson(person);
+
+        }
+
+        // menggunakan destructuring di parameter array
+        {
+            function sum([first, second]){
+                return first, second;
+            }
+
+            console.info([1,1]);
+            console.info([10,10]);
+        }
+
+        // default value destructuring array
+        {
+            const names = ["Muhammad", "Ali"];
+            const [firstName, middleName, lastName = "Albaiir"] = names;
+
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastnameName);
+        }
+
+        
+        
+    </script>
+
+</body>
+</html>

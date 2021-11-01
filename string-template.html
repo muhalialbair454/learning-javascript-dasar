@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Template</title>
+</head>
+<body>
+    
+    <script>
+
+        const fullName = "Muhammad Ali Albair";
+        const firstName = "Muhammad";
+        const middleName = "Ali";
+        const lastName = "Albair";
+
+        const template = `Name : ${fullName},  ${firstName} ${middleName} ${lastName}`; 
+
+        console.info(template);
+
+        // Expression di String Template
+        const nilai = 90;
+        const template2 = `Name : ${name}, lulus : ${nilai>70}`;
+
+        console.info(template2);
+
+        // Multiline String
+        const multiline = `Nama Saya Eko,
+Sekarang lagi mencoba belajar javascript,
+Saya ingin menjadi developer javascript`;
+
+        document.writeln("<pre>");
+        document.writeln(multiline);
+        document.writeln("</pre>");
+
+    </script>
+    
+</body>
+</html>

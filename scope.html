@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+    
+    <script>
+
+        // Global scope
+        let counter = 0;
+
+        // Global scope
+        function hitMe(){
+            // Local scope hitMe()
+            counter++; 
+        }
+
+        // Global scope
+        function other(){
+            // Local Scope Other
+        }
+
+        hitMe();
+        hitMe();
+
+        console.info(counter);
+
+        function first(){
+            // Local scope first
+            let firstVariable = "first";
+            
+            function firstNested(){
+                console.info(firstVariable);
+                const firstNameVariable = "First Nested";
+            }
+
+            firstNested();
+            // console.info(firstNameVariable); ERROR. karena di local scope firstNested di akses di luarnya / di function first()
+        }
+
+        function second(){
+            // Local scope second
+            let secondVariable = "second";
+        }
+
+        first();
+        second();
+
+        // console.info(firstVariable);  ERROR. firstVariable is not defined, karena berada di local scope first()
+        // console.info(secondVariable); ERROR. secondVariable is not defined, karena berada di local scope second()
+    </script>
+
+</body>
+</html>

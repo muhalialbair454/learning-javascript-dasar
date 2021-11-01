@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Method</title>
+</head>
+<body>
+    
+    <script>
+
+        // cara ke 1
+        const person = {
+            name: "Ali",
+            sayHello: function (name){ // anonymous function
+                alert(`Hello ${name}`)
+            }
+        }
+
+        person.sayHello("Ali");
+
+        // cara ke 2
+        function sayHi(name){
+            alert(`Hi ${name}`);
+        }
+
+        const person2 = {
+            name: "Alii",
+            sayHi: sayHi
+        }
+
+        person2.sayHi("Ali");
+
+        // cara ke 3, jika objek sudah berhasil di buat 
+        const person3 = {
+            name: "Ali"
+        };
+        person3.sayHi = function(name){
+            alert(`Hi ${name}`);
+        }
+
+        person3.sayHi("Ali");
+        
+
+    </script>
+
+</body>
+</html>

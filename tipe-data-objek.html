@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Objek(JS) / Array Associative(PHP)</title>
+</head>
+<body>
+    
+    <script>
+
+        const person = {}; // Objek Kosong
+
+        //Menambah atau Mengubah
+        person["nama"] = "Muhammad Ali Albair";
+        person["alamat"] = "Jakarta";
+        person["umur"] = 22;
+
+        console.table(person);
+
+        //Menghapus 
+        delete person["umur"];
+
+        console.table(person);
+
+        const orang = {
+            "Nama Lengkap" : "Muhammad Ali ALbair",
+            "Nama Depan" : "Muhammad",
+            "Nama Tengah" : "Ali",
+            "Nama Belakang" : "ALbair",
+            alamat : "Jakarta",
+            umur   : 22
+        };
+
+        console.table(orang);
+        console.info(`Nama : ${orang["Nama Lengkap"]}`);
+        console.info(`Nama Depan : ${orang["Nama Depan"]}`);
+        console.info(`Nama Tengah : ${orang["Nama Tengah"]}`);
+        console.info(`Nama Belakang : ${orang["Nama Belakang"]}`);
+        console.info(`Alamat : ${orang.alamat}`);
+        console.info(`Umur : ${orang.umur}`);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Array</title>
+</head>
+<body>
+    
+    <script>
+
+        let arrayKosong = []; // Array kosong
+        let arrayNama = ["Muhammad", "Ali", "Albair"]; // Array Isi
+
+        console.table(arrayNama);
+
+        // Menambahkan Value Pada Array
+        const names = [];
+        names.push("Muhammad");
+        names.push("Ali", "Albair");
+        names.push("Kartika", "Anatasya", "Putri", "Lestari");
+
+        console.table(names);
+        console.info(names[0]); // Data Ke 1
+        console.info(names[1]); // Data Ke 2
+        console.info(names[2]); // Data ke 3
+        console.info(names.length); // Panjang Array
+        
+        names[0] = "Ubah Muhammad"; // Mengubah Data di Array
+
+        console.table(names);
+
+        delete names[3]; // Menghapus Data
+
+        console.table(names);
+
+        names.push("Albair Lagi");
+
+        console.table(names);
+
+        names[3] = "Diisi Lagi"; // Mengisi Index 3 Kembali
+
+        console.table(names);
+
+        //Muliti Dimension / Array di Dalam Array
+        names.push(["Muhammad", "Ali", "Albair"]);
+        names.push(["Kartika", "Anatasya"]);
+
+        console.table(names);
+
+    </script>
+
+</body>
+</html>
